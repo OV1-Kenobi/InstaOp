@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>InstaOp</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidenav">
+        <a class="ig-logo" href="#/" aria-label="InstaOp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+          <span class="word">InstaOp</span>
+        </a>
+        <nav>
+          <button class="navbtn active" data-view="home" type="button">
+            <svg viewBox="0 0 24 24"><path d="M3 11.5 12 3.8 21 11.5V20a1.4 1.4 0 0 1-1.4 1.4H15v-6.2H9v6.2H4.4A1.4 1.4 0 0 1 3 20Z"/></svg>
+            <span>Home</span>
+          </button>
+          <button class="navbtn" data-view="search" type="button">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span>Search</span>
+          </button>
+          <button class="navbtn" data-view="search" type="button">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m9.2 14.6 1.4-4.8 4.8-1.4-1.4 4.8Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Explore</span>
+          </button>
+          <button class="navbtn" data-view="reels" type="button">
+            <svg viewBox="0 0 24 24"><rect x="3.2" y="4.2" width="17.6" height="15.6" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.6 9h16.8M8 4.4l2.2 4.6M13.2 4.4 15.6 9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m11 12 4 2.4-4 2.4V12Z"/></svg>
+            <span>Reels</span>
+          </button>
+          <button class="navbtn" data-view="messages" type="button">
+            <svg viewBox="0 0 24 24"><path d="m3.4 4.6 17.2 7.4-17.2 7.4 3.4-7.4-3.4-7.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6.8 12h7.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Messages</span>
+            <i class="badge">3</i>
+          </button>
+          <button class="navbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12.1 20.6S4.4 15.7 3.2 11.6C2.2 8.4 4 5.6 7.1 5.6c1.8 0 3.1 1.1 3.9 2.2.8-1.1 2.1-2.2 3.9-2.2 3.1 0 4.9 2.8 3.9 6-1.2 4.1-8.7 9-8.7 9Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            <span>Notifications</span>
+          </button>
+          <button class="navbtn" id="simulate" type="button">
+            <svg viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v8M8 12h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span>Create</span>
+          </button>
+          <button class="navbtn" data-view="profile" type="button">
+            <img class="nav-ava" src="https://i.pravatar.cc/64?u=you" alt="">
+            <span>Profile</span>
+          </button>
+        </nav>
+      </aside>
+
+      <div class="column">
+        <header class="topbar">
+          <h1 class="logo">InstaOp</h1>
+          <div class="topbar-right">
+            <span id="live-badge" class="live-dot" title="Live"></span>
+            <button class="icon-only" data-view="search" type="button" aria-label="Search">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <button class="icon-only heart" type="button" aria-label="Notifications">
+              <svg viewBox="0 0 24 24"><path d="M12.1 20.6S4.4 15.7 3.2 11.6C2.2 8.4 4 5.6 7.1 5.6c1.8 0 3.1 1.1 3.9 2.2.8-1.1 2.1-2.2 3.9-2.2 3.1 0 4.9 2.8 3.9 6-1.2 4.1-8.7 9-8.7 9Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+          </div>
+        </header>
+        <button id="new-pill" class="new-pill hidden" type="button">New posts</button>
+        <section class="stories"><div id="stories" class="stories-row"></div></section>
+        <main id="feed" class="feed"></main>
+      </div>
+
+      <aside class="rail">
+        <div class="me">
+          <img src="https://i.pravatar.cc/112?u=you" alt="">
+          <div>
+            <strong>you</strong>
+            <small>Watching the chain</small>
+          </div>
+          <button class="switch" type="button">Switch</button>
+        </div>
+        <div class="suggest-head">
+          <span>Suggested for you</span>
+          <button type="button">See All</button>
+        </div>
+        <div id="suggested"></div>
+        <p class="legal">About · Help · Press · API · Jobs · Privacy · Terms · Locations · Language · Meta Verified</p>
+        <p class="legal">© 2026 INSTAOP FROM BITCOIN</p>
+      </aside>
+    </div>
+
+    <nav class="tabbar">
+      <button class="tab active" data-view="home" type="button" aria-label="Home">
+        <svg viewBox="0 0 24 24"><path d="M3 11.5 12 3.8 21 11.5V20a1.4 1.4 0 0 1-1.4 1.4H15v-6.2H9v6.2H4.4A1.4 1.4 0 0 1 3 20Z"/></svg>
+      </button>
+      <button class="tab" data-view="search" type="button" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+      <button class="tab" id="simulate-m" type="button" aria-label="Create">
+        <svg viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v8M8 12h8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+      <button class="tab" data-view="reels" type="button" aria-label="Reels">
+        <svg viewBox="0 0 24 24"><rect x="3.2" y="4.2" width="17.6" height="15.6" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m11 12 4 2.4-4 2.4V12Z"/></svg>
+      </button>
+      <button class="tab" data-view="profile" type="button" aria-label="Profile">
+        <img src="https://i.pravatar.cc/64?u=you" alt="">
+      </button>
+    </nav>
+
+    <button class="msg-dock" data-view="messages" type="button">Messages <b>3</b></button>
+
+    <section id="search-view" class="overlay hidden">
+      <header><input id="search-input" type="search" placeholder="Search" /></header>
+      <div id="search-grid" class="grid"></div>
+    </section>
+
+    <section id="profile-view" class="overlay hidden">
+      <header class="profile-head">
+        <img class="xl" src="https://i.pravatar.cc/168?u=opreturn" alt="">
+        <div>
+          <h2>opreturn <button class="follow" type="button">Follow</button></h2>
+          <p><b id="stat-posts">0</b> posts &nbsp; <b>248K</b> followers &nbsp; <b>12</b> following</p>
+          <p><b>OP_RETURN</b><br>Bitcoin Mainnet<br>Forever on-chain.</p>
+        </div>
+      </header>
+      <div id="profile-grid" class="grid"></div>
+    </section>
+
+    <section id="messages-view" class="overlay hidden">
+      <header><h2>Messages</h2></header>
+      <div id="inbox" class="inbox"></div>
+    </section>
+
+    <div id="story-viewer" class="viewer hidden" role="dialog" aria-modal="true">
+      <div id="story-progress" class="progress"></div>
+      <button id="story-close" type="button" aria-label="Close">×</button>
+      <img id="story-image" alt="" />
+      <div class="viewer-copy">
+        <p id="story-user" class="who-line"></p>
+        <p id="story-caption" class="onchain"></p>
+      </div>
+      <button id="story-prev" class="hit left" type="button" aria-label="Previous"></button>
+      <button id="story-next" class="hit right" type="button" aria-label="Next"></button>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
